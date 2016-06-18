@@ -84,15 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="德玉酱～">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是web框架">
+<meta property="og:url" content="http://yoursite.com/2016/06/18/什么是web框架/index.html">
 <meta property="og:site_name" content="德玉酱～">
-<meta property="og:description">
+<meta property="og:description" content="Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你">
+<meta property="og:updated_time" content="2016-06-18T12:22:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="德玉酱～">
-<meta name="twitter:description">
+<meta name="twitter:title" content="什么是web框架">
+<meta name="twitter:description" content="Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你">
 
 
 
@@ -113,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/18/什么是web框架/"/>
 
-  <title> 德玉酱～ </title>
+  <title> 什么是web框架 | 德玉酱～ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,9 +234,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -257,10 +256,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/18/什么是web框架/" itemprop="url">
-                  什么是web框架
-                </a>
+                什么是web框架
               
             
           </h1>
@@ -307,9 +303,7 @@
       
 
       
-        
-          
-            <p>Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你应该首先对什么是 web 框架以及它们为什么会存在有更深的认识。这会让你学习一个新的 web 框架变得简单的多，还会让你在使用不同的框架的时候做个明知的选择。</p>
+        <p>Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你应该首先对什么是 web 框架以及它们为什么会存在有更深的认识。这会让你学习一个新的 web 框架变得简单的多，还会让你在使用不同的框架的时候做个明知的选择。</p>
 <p>Web 如何工作的？<br>在我们讨论框架之前，我们需要理解 Web 如何“工作”的。为此，我们将深入挖掘你在浏览器里输入一个 URL 按下 Enter 之后都发生了什么。在你的浏览器中打开一个新的标签，浏览<a href="http://www.jeffknupp.com" target="_blank" rel="external">http://www.jeffknupp.com</a> 。我们讨论为了显示这个页面，浏览器都做了什么事情（不关心 DNS 查询）。</p>
 <p>Web 服务器<br>每个页面都以 HTML 的形式传送到你的浏览器中，HTML 是一种浏览器用来描述页面内容和结构的语言。那些负责发送 HTML 到浏览器的应用称之为“Web 服务器”，会让你迷惑的是，这些应用运行的机器通常也叫做 web 服务器。</p>
 <p>然而，最重要的是要理解，到最后所有的 web 应用要做的事情就是发送 HTML 到浏览器。不管应用的逻辑多么复杂，最终的结果总是将 HTML 发送到浏览器（我故意将应用可以响应像 JSON 或者 CSS 等不同类型的数据忽略掉，因为在概念上是相同的）。</p>
@@ -357,16 +351,19 @@
 <p>但是最后要记住的是，Python web 框架都以相同的方式工作的：它们接收 HTTP 请求，分派代码，产生 HTML，创建带有内容的 HTTP 响应。事实上，所有主流的服务器端框架都以这种方式工作的（ JavaScript 框架除外）。但愿了解了这些框架的目的，你能够在不同的框架之间选择适合你应用的框架进行开发。</p>
 <p>原文地址：<a href="http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/" target="_blank" rel="external">http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -374,432 +371,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/18/什么是mvc？学习笔记/" rel="next" title="什么是mvc？学习笔记">
+                <i class="fa fa-chevron-left"></i> 什么是mvc？学习笔记
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/06/18/什么是mvc？学习笔记/" itemprop="url">
-                  什么是mvc？学习笔记
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T17:54:57+08:00" content="2016-06-18">
-              2016-06-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/18/什么是mvc？学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/什么是mvc？学习笔记/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>MVC 写成 View &lt;—&gt; Controller &lt;—&gt; Model 就好理解了。MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。</p>
-<p>View是登录界面。Model是登录功能模型，提供实现登录功能的所有接口，比如网络请求，数据校验等。Controller是View和Model的桥接，将View的输入传递到Model，并将Model的结果反馈到View。</p>
-<p>举个栗子，登录时：</p>
-<p>1、用户在View的Input上输入手机号后，点击View上的Button，触发Controller调用Model的verifyMobile(mobile)接口。<br>2、Model.verifyMobile(mobile) 校验后不符合手机号格式，返回出错提示msg: {passed: false, message:”长度不对”}。<br>3、Controller将msg显示在View上Input上。你就看到 Duang！ 在手机输入框后边出现一个红色提示框提示长度不对。<br>4、用户修改成正确的手机号后，重复1、2，校验通过。Controller再调用login(mobile, password)方法来请求登录。</p>
-<p>所以，MVC就是这么个东西。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/18/认识自己/" itemprop="url">
-                  认识自己
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T17:50:37+08:00" content="2016-06-18">
-              2016-06-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/18/认识自己/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/认识自己/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>此时此刻，我的心情并不是很好。可能还是因为看到自己以前的照片跟现在的自己对照吧。虽然说跟自己最差的时候来对比说，我真的是有在一步一步的改善。我也知道一些道理，就是任何事情都是有一个过程的。我们不可能够一步到位。我应该学会去自我调节自己的心情。毕竟自己也是一个成年人了，总有一天我也会跟现实社会中的大多数人一样成立家庭，成为一个社会构成的基本单位。肩膀上肩负着家庭的责任。成人的世界跟小孩子不同就是因为有责任。我首先需要做到的第一项基本责任就是对自己的行为负责，一直在逃避，问题并不会凭空的解决掉。你逃避的次数越多，所面临的困难也就越大。这是一个恶性循环循环。而人跟人的区别很大一部分就是恶性循环和良性循环而已。</p>
-<p>在看到自己的缺点的同时，我也需要看到自己的一些优点，他们就像是黑暗中的微弱的光。慢慢的在闪烁着，自从上到了大学以后，我的内心世界也在一步一步的打开了，比如说，昨天。我就敢跟女孩子一起去听讲座，这个放到以前的话，我是真的不敢。我对自己的内心是有很根深蒂固的自卑感的，这种自卑感谁着自己的成长在一步步的放大。但是，我也希望我有一颗宽容的心去接受自己的命运，困难和不幸穿刺于每个人的人生当中，接受有很多事情是无法避免的。对于任何人来说都是这样。记得叔本华说过，一个健康的乞丐比身体有疾病的皇帝还要感到幸福。一个健康的体魄是每一个人体会这个世界美好事物的容器。没有了健康的体魄，也就体会不到空气的清晰，体会不到花香的味道，就连那一些另所有人都感到的快乐的事情对他来说都要大大的打折。</p>
-<p>生2为人，对不起。这一句电影台词触碰到了很多人的心灵。我对自己并步需要有过多的自怜，你可以说自己的手牌真的很烂，但是那一些跟你手里拿着一样牌的人，他们都从没有向命运低过一次的头，他们就像一只正在看着草原上的羚羊的狮子，时刻的准备着，等待一次机会。只有眼镜注视着机会，这个机会才有可能被我们给抢到。把所有关注于自己什么不是领土的霸主狮子王上的时间都倾注于羚羊。总有一天可以抓到机会然后冲上去的。</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/18/To-my-friends/" itemprop="url">
-                  To my friends
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T11:35:11+08:00" content="2016-06-18">
-              2016-06-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/18/To-my-friends/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/To-my-friends/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>我记得，高中的时候我是一个比较自卑的男生，好朋友也不多。就那么几个，可能是因为我的性格原因吧。那个时候整个人都处于一种状态，不断的失眠，不断的失眠。失眠带来的自卑也不断恶性循环。很感谢那时候的你。并没有因为我失眠憔悴而排斥我，你每一次叫我一起出去玩的时候，我都有记得，晚上叫我出去喝汤岁。介绍你的好朋友大肥给我认识，叫我去画室找你，尽管是一些很小的事情。我都会记在心里，感觉到自己也有被在乎。因为你而认识的人也越来越多。</p>
-<p>之前流行一句话，只有长的好看的人才有青春。你说不是这样的，每个人都有属于他的青春。谢谢你成为我青春记忆里美好的一部分。</p>
-<p>我们的认识很巧合，很巧合。<br>之前跟莫怡静一起回家。她有经常告诉我。说她的同桌一直都想在亚马逊买书，但是不知道怎么买。然后的然后，你就加了我的QQ.第一句话好像是问我是不是怡静的好朋友，我说是，然后你就让我教你怎么注册账号，怎么在亚马孙购书，然后，教了你一晚上最后还是弄懂。最后还是我帮你下了单，早知道你就直接叫我帮你买不就可以了吗。我很清楚的记得，你叫我帮你的买的书籍叫做西厢记？</p>
-<p>可能我会不记得你的生日，我也没有在特定的节日里告诉你，什么节日快乐。每一年也只有能见几次面。但我希望你知道，you are my friend ,forver .</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/13/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-13T21:13:36+08:00" content="2016-06-13">
-              2016-06-13
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/13/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/13/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Hello，大家好。<br>我是德玉酱～</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -807,6 +404,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/18/什么是web框架/"
+           data-title="什么是web框架" data-url="http://yoursite.com/2016/06/18/什么是web框架/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -826,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/tuzi.jpg"
@@ -881,6 +495,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Hello, World!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#…"><span class="nav-number">2.</span> <span class="nav-text">…</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -977,6 +602,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
