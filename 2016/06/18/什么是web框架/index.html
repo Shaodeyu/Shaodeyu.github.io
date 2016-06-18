@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/06/18/什么是web框架/index.html">
 <meta property="og:site_name" content="德玉酱～">
 <meta property="og:description" content="Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你">
-<meta property="og:updated_time" content="2016-06-18T12:22:45.000Z">
+<meta property="og:updated_time" content="2016-06-18T12:26:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是web框架">
 <meta name="twitter:description" content="Web 应用框架，或者简单的说是“Web 框架”，其实是建立 web 应用的一种方式。从简单的博客系统到复杂的富 AJAX 应用，web 上每个页面都是通过写代码来生成的。我发现很多人都热衷于学习 web 框架技术，例如 Flask 或这 Django 之类的，但是很多人并不理解什么是 web 框架，或者它们是如何工作的。这篇文章中，我将探索反复被忽略的 web 框架基础的话题。阅读完这篇文章，你">
@@ -323,10 +323,24 @@
 <p>Web 应用<br>你可以仅仅使用 HTTP GET 和 POST 做很多事情。一个应用程序负责去接收一个 HTTP 请求，同时给以 HTTP 响应，通常包含了请求页面的 HTML。POST 请求会引起 web 应用做出一些行为，可能是往数据库中添加一条记录这样的。还有很多其它的 HTTP 方法，但是我们目前只关注 GET 和 POST。</p>
 <p>那么最简单的 web 应用是什么样的呢？我们可以写一个应用，让它一直监听 80 端口（著名的 HTTP 端口，几乎所有 HTTP 都发送到这个端口上）。一旦它接收到等待的客户端发送的请求连接，然后它就会回复一些简单的 HTML。</p>
 <p>下面是程序的代码：</p>
-<p>import socket<br>HOST = ‘’<br>PORT = 80<br>listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>listen_socket.bind((HOST, PORT))<br>listen_socket.listen(1)<br>connection, address = listen_socket.accept()<br>request = connection.recv(1024)<br>connection.sendall(b”””HTTP/1.1 200 OK<br>Content-type: text/html</p>
-<p><html></html></p>
-<p><body></body></p>
-<p></p><h1>Hello, World!</h1><br><br>“””)<br>connection.close()<br>（如果上面的代码不工作，试着将 PORT 改为类似 8080 这样的端口。）<p></p>
+<pre><code>import socket
+HOST = &apos;&apos;
+PORT = 80
+listen\_socket = socket.socket(socket.AF\_INET, socket.SOCK\_STREAM)
+listen\_socket.bind((HOST, PORT))
+listen\_socket.listen(1)
+connection, address = listen\_socket.accept()
+request = connection.recv(1024)
+connection.sendall(b&quot;&quot;&quot;HTTP/1.1 200 OK
+Content-type: text/html
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;&quot;&quot;&quot;)
+connection.close()
+</code></pre><p>（如果上面的代码不工作，试着将 PORT 改为类似 8080 这样的端口。）</p>
 <p>这个代码接收简单的链接和简单的请求，不管请求的 URL 是什么，它都会响应 HTTP 200（所以，这不是一个真正意义上的 web 服务器）。Content-type:text/html 行代码的是 header 字段，header 用来提供请求或者响应的元信息。这样，我们就告诉了客户端接下来的数据是 HTML。</p>
 <p>请求的剖析<br>如果看一下测试上面程序的 HTTP 请求，你会发现它和 HTTP 响应非常类似。第一行<http method=""> <url> <http version="">，在这个例子中是 GET / HTTP/1.0。第一行之后就是一些类似Accept: <em>/</em> 这样的头（意思是我们希望在响应中接收任何内容）。</http></url></http></p>
 <p>我们响应和请求有着类似的第一行，格式是<http version=""> <http status-code=""> <status-code reason="" phrase="">，在外面的例子中是HTTP/1.1 200 OK 。接下来是头部，与请求的头部有着相同的格式。最后是响应的实际包含的内容。注意，这会被解释为一个字符串或者二进制文件， Content-type 头告诉客户端怎样去解释响应。</status-code></http></http></p>
@@ -338,10 +352,10 @@
 <p>在 Django 中有点让人困惑的是，controllers 被称做 views，而 views 被称为 templates。除了名字上的有点奇怪，Django 很好地实现了 MVC 的体系架构。</p>
 <p>Django 中的路由<br>路由是处理请求 URL 到负责生成相关的 HTML 的代码之间映射的过程。在简单的情形下，所有的请求都是有相同的代码来处理（就像我们之前的例子那样）。变得稍微复杂一点，每个 URL 对应一个 view function 。举例来说，如果请求 www.foo.com/bar 这样的 URL，调用 handler_bar() 这样的函数来产生响应。我们可以建立这样的映射表，枚举出我们应用支持的所有 URL 与它们相关的函数。</p>
 <p>然而，当 URL 中包含有用的数据，例如资源的 ID（像这样 www.foo.com/users/3/） ，那么这种方法将变得非常臃肿。我们如何将 URL 映射到一个 view 函数，同时如何利用我们想显示 ID 为 3 的用户？</p>
-<p>Django 的答案是，将 URL 正则表达式映射到可以带参数的 view 函数。例如，我假设匹配^/users/(?P<id>\d+)/$ 的 URL 调用 display_user(id) 这样的函数，这儿参数 id 是正则表达式中匹配的 id。这种方法，任何 /users/<some_number>/ 这样的 URL 都会映射到 display_user 函数。这些正则表达式可以非常复杂，包含关键字和参数。</some_number></id></p>
+<p>Django 的答案是，将 URL 正则表达式映射到可以带参数的 view 函数。例如，我假设匹配^/users/(?P<id>\d+)/$ 的 URL 调用 display_user(id) 这样的函数，这儿参数 id 是正则表达式中匹配的 id。这种方法，任何 /users/\<some\_number\>/ 这样的 URL 都会映射到 display_user 函数。这些正则表达式可以非常复杂，包含关键字和参数。</some\_number\></id></p>
 <p>Flask 中的路由<br>Flask 采取了一点不同的方法。将一个函数和请求的 URL 关联起来的标准方法是通过使用 route() 装饰器。下面是 Flask 代码，在功能上和上面正则表达式方法相同：</p>
-<p>@app.route(‘/users/<id:int>/‘)<br>def display_user(id):</id:int></p>
-<h1 id="…"><a href="#…" class="headerlink" title="…"></a>…</h1><p>就像你看到的这样，装饰器使用几乎最简单的正则表达式的形式来将 URL 映射到参数。通过传递给route() 的 URL 中包含的 <name:type> 指令，可以提取到参数。路由像 /info/about_us.html 这样的静态 URL，可以像你预想的这样 @app.route(‘/info/about_us.html’) 处理。</name:type></p>
+<p>@app.route(‘/users/\<id:int\>/‘)<br>def display_user(id):</id:int\></p>
+<h1 id="…"><a href="#…" class="headerlink" title="…"></a>…</h1><p>就像你看到的这样，装饰器使用几乎最简单的正则表达式的形式来将 URL 映射到参数。通过传递给route() 的 URL 中包含的 \<name:type\> 指令，可以提取到参数。路由像 /info/about_us.html 这样的静态 URL，可以像你预想的这样 @app.route(‘/info/about_us.html’) 处理。</name:type\></p>
 <p>通过 Templates 产生 HTML<br>继续上面的例子，一旦我们有合适的代码映射到正确的 URL，我们如何动态生成 HTML？对于 Django 和 Flask，答案都是通过 HTML Templating。</p>
 <p>HTML Templating 和使用 str.format() 类似：需要动态输出值的地方使用占位符填充，这些占位符后来通过 str.format() 函数用参数替换掉。想象一下，整个 web 页面就是一个字符串，用括号标明动态数据的位置，最后再调用 str.format() 。Django 模板和 Flask 使用的模板引擎 Jinja2 都使用的是这种方法。</p>
 <p>然而，不是所有的模板引擎都能相同的功能。Django 支持在模板里基本的编程，而 Jinja2 只能让你执行特定的代码（不是真正意义上的代码，但也差不多）。Jinja2 可以缓存渲染之后的模板，让接下来具有相同参数的请求可以直接从缓存中返回结果，而不是用再次花大力气渲染。</p>
@@ -502,7 +516,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Hello, World!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#…"><span class="nav-number">2.</span> <span class="nav-text">…</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#…"><span class="nav-number">1.</span> <span class="nav-text">…</span></a></li></ol></div>
             
           </div>
         </section>
