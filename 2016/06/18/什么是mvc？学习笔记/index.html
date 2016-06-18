@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。
-View是登录界面。Model是登录功能模型，提供实现登录功能的所有接口，比如网络请求，数据校验等。Controller是View和Model的桥接，将View的">
+<meta name="description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是mvc？学习笔记">
 <meta property="og:url" content="http://yoursite.com/2016/06/18/什么是mvc？学习笔记/index.html">
 <meta property="og:site_name" content="德玉酱～">
-<meta property="og:description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。
-View是登录界面。Model是登录功能模型，提供实现登录功能的所有接口，比如网络请求，数据校验等。Controller是View和Model的桥接，将View的">
-<meta property="og:updated_time" content="2016-06-18T09:57:52.000Z">
+<meta property="og:description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。">
+<meta property="og:updated_time" content="2016-06-18T12:31:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是mvc？学习笔记">
-<meta name="twitter:description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。
-View是登录界面。Model是登录功能模型，提供实现登录功能的所有接口，比如网络请求，数据校验等。Controller是View和Model的桥接，将View的">
+<meta name="twitter:description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。">
 
 
 
@@ -306,7 +303,7 @@ View是登录界面。Model是登录功能模型，提供实现登录功能的�
       
 
       
-        <p>MVC 写成 View &lt;—&gt; Controller &lt;—&gt; Model 就好理解了。MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。</p>
+        <p>MVC 写成 View &lt;—&gt; Controller &lt;—&gt; Model 就好理解了。<br><a id="more"></a><br>MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。</p>
 <p>View是登录界面。Model是登录功能模型，提供实现登录功能的所有接口，比如网络请求，数据校验等。Controller是View和Model的桥接，将View的输入传递到Model，并将Model的结果反馈到View。</p>
 <p>举个栗子，登录时：</p>
 <p>1、用户在View的Input上输入手机号后，点击View上的Button，触发Controller调用Model的verifyMobile(mobile)接口。<br>2、Model.verifyMobile(mobile) 校验后不符合手机号格式，返回出错提示msg: {passed: false, message:”长度不对”}。<br>3、Controller将msg显示在View上Input上。你就看到 Duang！ 在手机输入框后边出现一个红色提示框提示长度不对。<br>4、用户修改成正确的手机号后，重复1、2，校验通过。Controller再调用login(mobile, password)方法来请求登录。</p>
