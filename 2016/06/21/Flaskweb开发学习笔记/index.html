@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习笔记," />
 
 
 
@@ -84,16 +84,28 @@
 
 
 
-<meta name="description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。">
+<meta name="description" content="视图函数的作用生成请求的响应。用户注册账号。服务器接受到数据请求。业务逻辑Flask把请求发到视图函数。视图函数访问数据库，添加新用户。表现逻辑然后生成响应发送到浏览器。
+建立一个大型表格构建HTML代码表格中的数据由数据库和HTML连接在一起
+把表现逻辑移动模版。模版是一个包含响应文本的文件。包含用占位变量的动态部分。
+具体值在请求上下文中才知道。
+渲染就是用具体值替换变量，返回最终得到的响应结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="什么是mvc？学习笔记">
-<meta property="og:url" content="http://yoursite.com/2016/06/18/什么是mvc？学习笔记/index.html">
+<meta property="og:title" content="Flaskweb开发学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/06/21/Flaskweb开发学习笔记/index.html">
 <meta property="og:site_name" content="德玉酱～">
-<meta property="og:description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。">
-<meta property="og:updated_time" content="2016-06-18T12:31:35.000Z">
+<meta property="og:description" content="视图函数的作用生成请求的响应。用户注册账号。服务器接受到数据请求。业务逻辑Flask把请求发到视图函数。视图函数访问数据库，添加新用户。表现逻辑然后生成响应发送到浏览器。
+建立一个大型表格构建HTML代码表格中的数据由数据库和HTML连接在一起
+把表现逻辑移动模版。模版是一个包含响应文本的文件。包含用占位变量的动态部分。
+具体值在请求上下文中才知道。
+渲染就是用具体值替换变量，返回最终得到的响应结">
+<meta property="og:updated_time" content="2016-06-21T03:13:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是mvc？学习笔记">
-<meta name="twitter:description" content="MVC 写成 View &amp;lt;—&amp;gt; Controller &amp;lt;—&amp;gt; Model 就好理解了。">
+<meta name="twitter:title" content="Flaskweb开发学习笔记">
+<meta name="twitter:description" content="视图函数的作用生成请求的响应。用户注册账号。服务器接受到数据请求。业务逻辑Flask把请求发到视图函数。视图函数访问数据库，添加新用户。表现逻辑然后生成响应发送到浏览器。
+建立一个大型表格构建HTML代码表格中的数据由数据库和HTML连接在一起
+把表现逻辑移动模版。模版是一个包含响应文本的文件。包含用占位变量的动态部分。
+具体值在请求上下文中才知道。
+渲染就是用具体值替换变量，返回最终得到的响应结">
 
 
 
@@ -114,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/18/什么是mvc？学习笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/21/Flaskweb开发学习笔记/"/>
 
-  <title> 什么是mvc？学习笔记 | 德玉酱～ </title>
+  <title> Flaskweb开发学习笔记 | 德玉酱～ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +268,7 @@
             
             
               
-                什么是mvc？学习笔记
+                Flaskweb开发学习笔记
               
             
           </h1>
@@ -268,8 +280,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T17:54:57+08:00" content="2016-06-18">
-              2016-06-18
+            <time itemprop="dateCreated" datetime="2016-06-21T11:10:49+08:00" content="2016-06-21">
+              2016-06-21
             </time>
           </span>
 
@@ -279,8 +291,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/18/什么是mvc？学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/什么是mvc？学习笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/06/21/Flaskweb开发学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/Flaskweb开发学习笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -303,11 +315,12 @@
       
 
       
-        <p>MVC 写成 View &lt;—&gt; Controller &lt;—&gt; Model 就好理解了。<br><a id="more"></a><br>MVC并非谁创造的理论，它只是被赋予一个世界通用的名字，任何有经验有追求的程序员即使完全不知道MVC这个东西，都会走向MVC。</p>
-<p>View是登录界面。Model是登录功能模型，提供实现登录功能的所有接口，比如网络请求，数据校验等。Controller是View和Model的桥接，将View的输入传递到Model，并将Model的结果反馈到View。</p>
-<p>举个栗子，登录时：</p>
-<p>1、用户在View的Input上输入手机号后，点击View上的Button，触发Controller调用Model的verifyMobile(mobile)接口。<br>2、Model.verifyMobile(mobile) 校验后不符合手机号格式，返回出错提示msg: {passed: false, message:”长度不对”}。<br>3、Controller将msg显示在View上Input上。你就看到 Duang！ 在手机输入框后边出现一个红色提示框提示长度不对。<br>4、用户修改成正确的手机号后，重复1、2，校验通过。Controller再调用login(mobile, password)方法来请求登录。</p>
-<p>所以，MVC就是这么个东西。</p>
+        <p>视图函数的作用生成请求的响应。<br>用户注册账号。<br>服务器接受到数据请求。<br><strong>业务逻辑</strong><br>Flask把请求发到视图函数。<br>视图函数访问数据库，添加新用户。<br><strong>表现逻辑</strong><br>然后生成响应发送到浏览器。</p>
+<p>建立一个大型表格构建HTML代码<br>表格中的数据由数据库和HTML连接在一起</p>
+<p>把表现逻辑移动模版。<br>模版是一个包含响应文本的文件。<br>包含用占位变量的动态部分。</p>
+<p>具体值在请求上下文中才知道。</p>
+<p>渲染就是用具体值替换变量，返回最终得到的响应结果。</p>
+<p>Jinja2模版引擎。</p>
 
       
     </div>
@@ -327,22 +340,24 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/18/认识自己/" rel="next" title="认识自己">
-                <i class="fa fa-chevron-left"></i> 认识自己
+              <a href="/2016/06/20/写作技巧/" rel="next" title="写作技巧">
+                <i class="fa fa-chevron-left"></i> 写作技巧
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/18/什么是web框架/" rel="prev" title="什么是web框架">
-                什么是web框架 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -368,8 +383,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/18/什么是mvc？学习笔记/"
-           data-title="什么是mvc？学习笔记" data-url="http://yoursite.com/2016/06/18/什么是mvc？学习笔记/">
+      <div class="ds-thread" data-thread-key="2016/06/21/Flaskweb开发学习笔记/"
+           data-title="Flaskweb开发学习笔记" data-url="http://yoursite.com/2016/06/21/Flaskweb开发学习笔记/">
       </div>
     
   </div>
