@@ -258,6 +258,146 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/26/CSS命名规范/" itemprop="url">
+                  CSS命名规范
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-26T11:47:04+08:00" content="2016-06-26">
+              2016-06-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/26/CSS命名规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/26/CSS命名规范/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>CSS书写顺序</p>
+<ol>
+<li>位置属性（position,top,right,z-index,display,float等。）</li>
+<li>大小（width,height,padding,margin等）</li>
+<li>文字属性（font，line-height,letter-spacing, color- text-align等。）</li>
+<li>背景（background,border等）</li>
+<li>其他(animation，transition等)</li>
+</ol>
+<p>CSS命名规范常用的CSS命名规则<br>头：header<br>内容：content／container<br>尾巴：footer<br>导航：nav<br>侧栏：sidebar<br>栏目：column<br>页面外围控制整体布局宽度：wrapper<br>左右中：left right center<br>登录条：loginbar<br>标志：logo<br>广告：banner<br>页面主体：main<br>热点：hot<br>新闻：news<br>下载：download<br>子导航：subnav<br>菜单：menu<br>子菜单：submenu<br>搜索：search<br>友情链接：friend link<br>版权：copyright<br>滚动：scroll<br>标签：tags<br>文章列表：list<br>提示信息：msg<br>小技巧：tips<br>栏目标题：title<br>加入：joins<br>指南：guide<br>服务：service<br>注册：register<br>状态：status<br>投票：vote<br>合作伙伴：partner</p>
+<p>Id的命名:<br>　　1)页面结构<br>　　容器: container<br>　　页头：header<br>　　内容：content/container<br>　　页面主体：main<br>　　页尾：footer<br>　　导航：nav<br>　　侧栏：sidebar<br>　　栏目：column<br>　　页面外围控制整体佈局宽度：wrapper<br>　　左右中：left right center<br>(2)导航<br>　　导航：nav<br>　　主导航：mainnav<br>　　子导航：subnav<br>　　顶导航：topnav<br>　　边导航：sidebar<br>　　左导航：leftsidebar<br>　　右导航：rightsidebar<br>　　菜单：menu<br>　　子菜单：submenu<br>　　标题: title<br>　　摘要: summary<br>(3)功能<br>　　标志：logo<br>　　广告：banner<br>　　登陆：login<br>　　登录条：loginbar<br>　　注册：register<br>　　搜索：search<br>　　功能区：shop<br>　　标题：title<br>　　加入：joinus<br>　　状态：status<br>　　按钮：btn<br>　　滚动：scroll<br>　　标籤页：tab<br>　　文章列表：list<br>　　提示信息：msg<br>　　当前的: current<br>　　小技巧：tips<br>　　图标: icon<br>　　注释：note<br>　　指南：guild<br>　　服务：service<br>　　热点：hot<br>　　新闻：news<br>　　下载：download<br>　　投票：vote<br>　　合作伙伴：partner<br>　　友情链接：link<br>　　版权：copyright<br>注意事项::<br>　　1.一律小写;<br>　　2.尽量用英文;<br>　　3.不加中槓和下划线;<br>　　4.尽量不缩写，除非一看就明白的单词。<br>CSS样式表文件命名<br>　　主要的 master.css<br>　　模块 module.css<br>　　基本共用 base.css<br>　　布局、版面 layout.css<br>　　主题 themes.css<br>　　专栏 columns.css<br>　　文字 font.css<br>　　表单 forms.css<br>　　补丁 mend.css<br>　　打印 print.css<br>全局：global.css</p>
+<p>全局样式为全站公用，为页面样式基础，页面中必须包含。</p>
+<p>结构：layout.css</p>
+<p>页面结构类型复杂，并且公用类型较多时使用。多用在首页级页面和产品类页面中。</p>
+<p>私有：style.css</p>
+<p>独立页面所使用的样式文件，页面中必须包含。</p>
+<p>模块 module.css</p>
+<p>产品类页面应用，将可复用类模块进行剥离后，可与其它样式配合使用。</p>
+<p>主题 themes.css</p>
+<p>实现换肤功能时应用。</p>
+<p>补丁 mend.css</p>
+<p>基于以上样式进行的私有化修补。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/23/程序是怎样跑起来的？学习笔记/" itemprop="url">
                   程序是怎样跑起来的？学习笔记
                 </a>
@@ -1259,110 +1399,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/13/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-13T21:13:36+08:00" content="2016-06-13">
-              2016-06-13
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/13/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/13/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Hello，大家好。<br>我是德玉酱～</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1401,7 +1444,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1409,7 +1452,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

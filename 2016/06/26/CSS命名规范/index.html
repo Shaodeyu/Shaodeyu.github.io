@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习笔记," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,34 @@
 
 
 
-<meta name="description" content="在1989年3月，互联网还只是属于少数人，在这一互联网的黎明期，HTTP诞生了。">
+<meta name="description" content="CSS书写顺序
+
+位置属性（position,top,right,z-index,display,float等。）
+大小（width,height,padding,margin等）
+文字属性（font，line-height,letter-spacing, color- text-align等。）
+背景（background,border等）
+其他(animation，transition等)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图解HTTP。学习笔记">
-<meta property="og:url" content="http://yoursite.com/2016/06/19/图解HTTP。学习笔记/index.html">
+<meta property="og:title" content="CSS命名规范">
+<meta property="og:url" content="http://yoursite.com/2016/06/26/CSS命名规范/index.html">
 <meta property="og:site_name" content="德玉酱～">
-<meta property="og:description" content="在1989年3月，互联网还只是属于少数人，在这一互联网的黎明期，HTTP诞生了。">
-<meta property="og:updated_time" content="2016-06-23T15:27:40.000Z">
+<meta property="og:description" content="CSS书写顺序
+
+位置属性（position,top,right,z-index,display,float等。）
+大小（width,height,padding,margin等）
+文字属性（font，line-height,letter-spacing, color- text-align等。）
+背景（background,border等）
+其他(animation，transition等)">
+<meta property="og:updated_time" content="2016-06-26T03:49:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图解HTTP。学习笔记">
-<meta name="twitter:description" content="在1989年3月，互联网还只是属于少数人，在这一互联网的黎明期，HTTP诞生了。">
+<meta name="twitter:title" content="CSS命名规范">
+<meta name="twitter:description" content="CSS书写顺序
+
+位置属性（position,top,right,z-index,display,float等。）
+大小（width,height,padding,margin等）
+文字属性（font，line-height,letter-spacing, color- text-align等。）
+背景（background,border等）
+其他(animation，transition等)">
 
 
 
@@ -114,9 +132,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/19/图解HTTP。学习笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/26/CSS命名规范/"/>
 
-  <title> 图解HTTP。学习笔记 | 德玉酱～ </title>
+  <title> CSS命名规范 | 德玉酱～ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +274,7 @@
             
             
               
-                图解HTTP。学习笔记
+                CSS命名规范
               
             
           </h1>
@@ -268,8 +286,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-19T20:12:34+08:00" content="2016-06-19">
-              2016-06-19
+            <time itemprop="dateCreated" datetime="2016-06-26T11:47:04+08:00" content="2016-06-26">
+              2016-06-26
             </time>
           </span>
 
@@ -282,8 +300,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -298,8 +316,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/19/图解HTTP。学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/19/图解HTTP。学习笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/06/26/CSS命名规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/26/CSS命名规范/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,12 +340,27 @@
       
 
       
-        <p>在1989年3月，互联网还只是属于少数人，在这一互联网的黎明期，HTTP诞生了。<br><a id="more"></a><br>天才的设想远远都超出人的想象，他们不像暴发户那样，想着要不我们就少数人玩这个互联网新玩意就好了。<br>于是他们提出了WWW的构建技术。<br>    用于SGML（standard Generalized Markup Language）的文本标记语言HTML。<br>    作为文档传输协议的HTTP。<br>    指定文档所在地址的URL（Uniform Resource Locater）.</p>
-<p>今天我们要将的是HTTP，拿我们就必须先了解一下TCP/IP协议族。<br>现在我们通常使用的网络（包括互联网）都是在TCP／IP协议族的基础上运作的，而HTTP属于它内部的一个子集。</p>
-<p>我想跟你讲话，就要用大家都相同的语言，比如中文。<br>同理，计算机要想与网络设备互相通信，双方也必须基于相同的方法。<br>比如，如和探测到通信目标，由哪一边先发起通信。使用哪种语言进行通信，怎样结束通信等规则都需要事先确定。<br>把互联网相关的协议集合起来总称就为TCP/IP。</p>
-<p>汽车是由各种不同的部件组合起来在一起的，这样有很多的好处。当我们的轮胎坏的时候，我们只需要拿出单独的轮胎来修就可以了。天才们设计TCP／IP也是分层的。<br>TCP/IP分为四个层：应用层，传输层，网络层，和数据链路层。<br><strong>应用层</strong><br>应用层决定了向用户提供应用服务时通信的活动。<br>比如FTP和DNS服务就是这两类。<br>当然今天我们的HTTP主角也是在这一层的哦。<br><em>传输层</em><br>传输层对应上层应用层，提供处于网络连接中的两台计算机之间的数据传输。<br>传输层有两个不同的协议。<br>TCP（）和UDP（User Data Protocol，用户数据报协议）。<br><em>网络层</em><br>网络层用来处理在网络上流动的数据包。<br><em>链路层</em><br>用来处理连接网络的硬件部分。包括控制操作系统。硬件的设备驱动。NIC（Network Interface Card，其实就是网卡啦。）等物理部分。</p>
-<p>每个人都有几个很要好的朋友。<br>对于HTTP，当然也是这样。在TCP/IP协议当中。<br>HTTP和IP，TCP，DNS密不可分。<br>负责传输协议的IP协议。<br>按层次分，IP（Inter Protocol）网际协议位于应用层。几乎所有的使用网络系统都会用到IP协议。<br>TCP／IP协议中的IP占据了协议的一半的名字，可见其重要性。IP和IP协议可是不同的喔，亲。IP协议的作用就是把各种数据包传送给对方。而要保证确实传送到对方那里，就要满足各类条件。其中两个重要的条件就是IP地址和MAC地址（Media Access Control Address）（此MAC不是Macbook的mac）.<br>使用ARP协议凭借MAC地址进行通信。<br>IP间的通信依赖MAC地址。在进行通信的时候，通常都是经过多台电脑多台网络设备中转的。那么问题来啦？中转需要什么样的协议？这个时候就用到ARP（Address Resolution Protocol）协议了。在进行中转的时候，会利用下一站中转设备的MAC地址来搜索下一个中转目标。ARP是一种用来解析地址的协议，根据通信方的IP地址就可以反查出对应的MAC地址。</p>
-<p>其实没有人能够全面的掌握互联网传输的传输状况。<br>就像我们上淘宝买东西的时候，我们看快递只能够知道到了哪个地方，下一站在那里，而不会知道在路途的具体地点。</p>
+        <p>CSS书写顺序</p>
+<ol>
+<li>位置属性（position,top,right,z-index,display,float等。）</li>
+<li>大小（width,height,padding,margin等）</li>
+<li>文字属性（font，line-height,letter-spacing, color- text-align等。）</li>
+<li>背景（background,border等）</li>
+<li>其他(animation，transition等)</li>
+</ol>
+<p>CSS命名规范常用的CSS命名规则<br>头：header<br>内容：content／container<br>尾巴：footer<br>导航：nav<br>侧栏：sidebar<br>栏目：column<br>页面外围控制整体布局宽度：wrapper<br>左右中：left right center<br>登录条：loginbar<br>标志：logo<br>广告：banner<br>页面主体：main<br>热点：hot<br>新闻：news<br>下载：download<br>子导航：subnav<br>菜单：menu<br>子菜单：submenu<br>搜索：search<br>友情链接：friend link<br>版权：copyright<br>滚动：scroll<br>标签：tags<br>文章列表：list<br>提示信息：msg<br>小技巧：tips<br>栏目标题：title<br>加入：joins<br>指南：guide<br>服务：service<br>注册：register<br>状态：status<br>投票：vote<br>合作伙伴：partner</p>
+<p>Id的命名:<br>　　1)页面结构<br>　　容器: container<br>　　页头：header<br>　　内容：content/container<br>　　页面主体：main<br>　　页尾：footer<br>　　导航：nav<br>　　侧栏：sidebar<br>　　栏目：column<br>　　页面外围控制整体佈局宽度：wrapper<br>　　左右中：left right center<br>(2)导航<br>　　导航：nav<br>　　主导航：mainnav<br>　　子导航：subnav<br>　　顶导航：topnav<br>　　边导航：sidebar<br>　　左导航：leftsidebar<br>　　右导航：rightsidebar<br>　　菜单：menu<br>　　子菜单：submenu<br>　　标题: title<br>　　摘要: summary<br>(3)功能<br>　　标志：logo<br>　　广告：banner<br>　　登陆：login<br>　　登录条：loginbar<br>　　注册：register<br>　　搜索：search<br>　　功能区：shop<br>　　标题：title<br>　　加入：joinus<br>　　状态：status<br>　　按钮：btn<br>　　滚动：scroll<br>　　标籤页：tab<br>　　文章列表：list<br>　　提示信息：msg<br>　　当前的: current<br>　　小技巧：tips<br>　　图标: icon<br>　　注释：note<br>　　指南：guild<br>　　服务：service<br>　　热点：hot<br>　　新闻：news<br>　　下载：download<br>　　投票：vote<br>　　合作伙伴：partner<br>　　友情链接：link<br>　　版权：copyright<br>注意事项::<br>　　1.一律小写;<br>　　2.尽量用英文;<br>　　3.不加中槓和下划线;<br>　　4.尽量不缩写，除非一看就明白的单词。<br>CSS样式表文件命名<br>　　主要的 master.css<br>　　模块 module.css<br>　　基本共用 base.css<br>　　布局、版面 layout.css<br>　　主题 themes.css<br>　　专栏 columns.css<br>　　文字 font.css<br>　　表单 forms.css<br>　　补丁 mend.css<br>　　打印 print.css<br>全局：global.css</p>
+<p>全局样式为全站公用，为页面样式基础，页面中必须包含。</p>
+<p>结构：layout.css</p>
+<p>页面结构类型复杂，并且公用类型较多时使用。多用在首页级页面和产品类页面中。</p>
+<p>私有：style.css</p>
+<p>独立页面所使用的样式文件，页面中必须包含。</p>
+<p>模块 module.css</p>
+<p>产品类页面应用，将可复用类模块进行剥离后，可与其它样式配合使用。</p>
+<p>主题 themes.css</p>
+<p>实现换肤功能时应用。</p>
+<p>补丁 mend.css</p>
+<p>基于以上样式进行的私有化修补。</p>
 
       
     </div>
@@ -347,28 +380,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/18/什么是web框架/" rel="next" title="什么是web框架">
-                <i class="fa fa-chevron-left"></i> 什么是web框架
+              <a href="/2016/06/23/程序是怎样跑起来的？学习笔记/" rel="next" title="程序是怎样跑起来的？学习笔记">
+                <i class="fa fa-chevron-left"></i> 程序是怎样跑起来的？学习笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/20/哈佛大学：幸福课笔记整理（转载）/" rel="prev" title="哈佛大学：幸福课笔记整理（转载）">
-                哈佛大学：幸福课笔记整理（转载） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -394,8 +417,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/19/图解HTTP。学习笔记/"
-           data-title="图解HTTP。学习笔记" data-url="http://yoursite.com/2016/06/19/图解HTTP。学习笔记/">
+      <div class="ds-thread" data-thread-key="2016/06/26/CSS命名规范/"
+           data-title="CSS命名规范" data-url="http://yoursite.com/2016/06/26/CSS命名规范/">
       </div>
     
   </div>
